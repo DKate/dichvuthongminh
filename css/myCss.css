@@ -1,0 +1,316 @@
+.center-column{display: flex;flex-direction: column;justify-content: center;}
+.center-row{display: flex;flex-direction: row;justify-content: center;}
+
+.txt-bold{font-weight: bold!important;}
+.txt-center{text-align: center;letter-spacing: .02px}
+.txt-left{text-align: left;letter-spacing: .5px}
+.txt-right{text-align: right;letter-spacing: .5px}
+
+.txt-font-01{font-family: 'Montserrat', sans-serif;}
+.txt-font-mono{font-family: 'monospace', sans-serif;}
+.txt-font-opensan{font-family: 'Open Sans', sans-serif;}
+
+.txt-white{color: white;}
+.txt-black{color: black;}
+
+.btn-black{background-color: white;color: black;border:1.7px solid black;cursor: pointer;}
+.btn-black:hover{background-color: black;color: white;border:1.7px solid black;cursor: pointer;}
+
+.inline-block{display: inline-block;}
+
+
+.img-full{background-repeat: no-repeat;background-size: cover;}
+.img-inside{background-repeat:no-repeat;background-size: contain;}
+
+.clearfix:after{clear:both; display:block;width:0;height:0;content:".";}
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial; 
+}
+
+.opacity1{opacity: 1!important;visibility: visible!important;}
+.opacity0{opacity: 0!important;visibility: hidden!important;}
+
+
+@font-face { /*Montserrat-Regular*/
+	font-family: "Montserrat-Regular";
+	font-style: normal; 
+	font-weight: 400; 
+	src: local("Montserrat Regular"), 
+		local("Montserrat-Regular"), 
+		url("../Montserrat/Montserrat-Regular.ttf") 
+		format("woff2"); 
+	unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; 
+}
+@font-face { /*Montserrat-Bold*/
+	font-family: "Montserrat-Bold";
+	src: local("Montserrat Regular"), 
+		local("Montserrat-Regular"), 
+		url("../Montserrat/Montserrat-Bold.ttf") 
+		format("woff2"); 
+	unicode-range: U+102-103, U+1EA0-1EF9, U+20AB; 
+}
+body{
+	background-color: rgba(47, 120, 238, 0.04);
+}
+h1,h2,h3,h4,h5,h6,p,li{
+	font-family: 'Montserrat-Bold', sans-serif;
+}
+
+
+/*header*/
+header{
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 2;
+ background-color: transparent;
+ color: white;
+ width: 100%;
+ display: block;
+}
+header .row{
+	padding: 13px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: initial;
+}
+.header-left{
+	margin:0;
+	padding: 14px;
+	float: left;
+}
+.header-left img{
+	width: 180px;
+	height: 43px
+	padding:4px;
+}
+.header-right{
+	padding: 0;
+	margin: 0;
+}
+.header-right ul{
+	padding: 0;
+	margin: 0;
+	display: block;
+	float: right;
+	list-style-type: none;
+}
+.header-right ul li{
+	padding: 10px 39px;
+	float: left;
+	padding-right: 0;
+}
+.header-right ul li:hover a{
+	color: GoldenRod;
+	cursor: pointer;
+}
+.header-right ul li a{
+	font-size: 20px;
+	font-weight: 400;
+	color: white;
+	transition: .2s;
+	margin-left: 4px;
+}
+.header-right span i{
+	font-size:25px;
+	transition: .3s;
+}
+.header-right span{
+	padding: 4px 0;
+}
+.header-right span:hover i{
+	cursor: pointer;
+	-webkit-transform: scale(.8);
+	-ms-transform: scale(.8);
+	-o-transform: scale(.8);
+	transform: scale(.8);	
+}
+/*top bar */
+.translateX{
+	opacity: 1!important;
+	visibility: visible!important;
+	-webkit-transform: translateY(0)!important;
+	-ms-transform: translateY(0)!important;
+	-o-transform: translateY(0)!important;
+	transform: translateY(0)!important;
+}
+.topBar{
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	display: block;
+	z-index: 200;
+	transition: .8s;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+.topBar .row{
+	padding: 0;
+    margin: 1px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+}
+.topBar-left{
+}
+.topBar-left img{
+	width: 175px;
+    height: 37px;
+    margin: 8px 0;
+    padding: 4px;
+}
+.topBar-right{
+}
+.topBar-right ul{
+	padding: 0;
+	margin: 0;
+	display: block;
+	float: right;
+	list-style-type: none;
+}
+.topBar-right ul li{
+	float: left;
+	padding-right: 0;
+}
+.topBar-right ul li:hover a{
+	color: blue;
+	cursor: pointer;
+}
+.topBar-right ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    transition: .2s;
+    margin-left: 4px;
+    padding: 14px 32px;
+    display: inline-block;
+}
+.topBar-right span i{
+	font-size:15px;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: .3s;
+}
+.topBar-right span{
+	padding: 18px 0;
+}
+.topBar-right span:hover i{
+	cursor: pointer;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+/*banner */
+.banner{
+	position: relative;
+	height: 650px;
+}
+.banner img{
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bg-02{
+	background: rgb(124, 27, 87);
+}
+.center-column>a{
+	position: relative;
+	color:black;
+}
+.banner:hover .next-arrow,
+.banner:hover .prev-arrow{
+	opacity: 1	;
+}
+.next-arrow, .prev-arrow{
+	opacity: 0;
+	transform: scale(1);
+	transition: 1s;
+	position: absolute;
+	width: 10%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	top: 50%;
+	z-index: 200;
+	padding: 0px 20px;
+	background-color: white!important;
+	border-radius: 50%;
+	text-align: center;
+	width: 3em;
+	height: 3em;
+}
+.next-arrow i,
+.prev-arrow i{
+	color:black;
+	transition: .5s;
+}
+.next-arrow:hover,
+.prev-arrow:hover{
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	background-color: #b30808!important;
+	color:white!important;
+	cursor: pointer;
+}
+.next-arrow:hover i,
+.prev-arrow:hover i{
+	color:white!important;
+}
+.next-arrow{
+	right: 13.5px;
+	text-align: right;
+}
+.prev-arrow{
+	text-align: left;
+	left: 13.5px;
+}
+.prev-arrow a i{
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+/*about me */
+.aboutMe{
+
+}
+
+/*service */
+.service{
+
+}
+
+/*footer */
+footer{
+
+}
+
+/*end bar */
+.endBar{
+
+}
+
